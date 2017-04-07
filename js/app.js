@@ -4,7 +4,6 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.graphQLFetcher = undefined;
 
 var _isomorphicFetch = require('isomorphic-fetch');
 
@@ -21,7 +20,7 @@ var getCookie = function getCookie(name) {
 
 var Token = getCookie('Token');
 
-var graphQLFetcher = exports.graphQLFetcher = function graphQLFetcher(query) {
+var graphQLFetcher = function graphQLFetcher(query) {
     var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var variables = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.assign({ Token: Token }, params);
 
@@ -50,6 +49,8 @@ var graphQLFetcher = exports.graphQLFetcher = function graphQLFetcher(query) {
         });
     });
 };
+
+exports.default = graphQLFetcher;
 
 },{"isomorphic-fetch":54}],2:[function(require,module,exports){
 'use strict';
