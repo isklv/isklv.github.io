@@ -22,19 +22,20 @@ var Token = getCookie('Token');
 
 var graphQLFetcher = function graphQLFetcher(query) {
     var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    var variables = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.assign({ Token: Token }, params);
+    var variables = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.assign({
+        Token: Token
+    }, params);
 
     return new Promise(function (resolve, reject) {
-        return (0, _isomorphicFetch2.default)(graphqlServer, { mode: 'cors' }, {
+        return (0, _isomorphicFetch2.default)(graphqlServer, {
+            mode: 'cors'
+        }, {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                query: query,
-                variables: variables
-            })
+            body: JSON.stringify({ query: query, variables: variables })
         }).then(function (response) {
             return response.json();
         }).then(function (json) {
