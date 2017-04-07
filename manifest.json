@@ -1,0 +1,31 @@
+{
+    "name": "Test",
+    "version": "0.1.0",
+    "default_locale": "ru",
+    "description": "Description",
+    "icons": [{
+        "src": "images/logo-48.png",
+        "sizes": "48x48"
+    },
+    {
+        "src": "images/logo-72.png",
+        "sizes": "72x72"
+    },
+    {
+        "src": "images/logo-96.png",
+        "sizes": "96x96"
+    },
+    {
+        "src": "images/logo-144.png",
+        "sizes": "144x144"
+    },
+    {
+        "src": "images/logo-168.png",
+        "sizes": "168x168"
+    },
+    {
+        "src": "images/logo-192.png",
+        "sizes": "192x192"
+    }],
+    "gcm_sender_id": "103953800507"
+}
