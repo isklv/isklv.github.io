@@ -4,6 +4,8 @@
     "default_locale": "ru",
     "description": "Description",
     "background_color": "#1c4688",
+    "theme_color": "#1c4688",
+    "display": "standalone",
     "icons": [{
         "src": "images/logo-48.png",
         "sizes": "48x48",
