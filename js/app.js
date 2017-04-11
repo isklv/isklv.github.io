@@ -11,7 +11,7 @@ var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var graphqlServer = 'http://rdc-web-app1-test.bankrc.local:3035/webpush/graphql'; //window.location.origin + '/graphql';
+var graphqlServer = 'https://rdc-web-app1-test-service.bankrc.local/webpush/graphql'; //window.location.origin + '/graphql';
 
 var getCookie = function getCookie(name) {
     var matches = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'));
