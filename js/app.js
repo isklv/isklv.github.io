@@ -28,8 +28,7 @@ var graphQLFetcher = function graphQLFetcher(query) {
 
     return new Promise(function (resolve, reject) {
         return (0, _isomorphicFetch2.default)(graphqlServer, {
-            mode: 'cors'
-        }, {
+            mode: 'cors',
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -136,7 +135,7 @@ var App = function (_React$Component) {
                     _react2.default.createElement(_WebPush2.default, {
                         messagingSenderId: '681906672039',
                         sendSubscriptionToServer: function sendSubscriptionToServer(token) {
-                            (0, _graphQLFetcher2.default)('\n                                mutation {\n                                    saveSubscriber(data: {hash: ' + token + ', url: ' + window.location.href + '}){\n                                        status\n                                        id\n                                        errorCode\n                                    }\n                                }\n                                ').then(function (data) {
+                            return (0, _graphQLFetcher2.default)('\n                                mutation {\n                                    saveSubscriber(data: {hash: ' + token + ', url: ' + window.location.href + '}){\n                                        status\n                                        id\n                                        errorCode\n                                    }\n                                }\n                                ').then(function (data) {
                                 console.log(data);
                             }).catch(console.error);
                         },
@@ -251,8 +250,7 @@ var WebPush = function (_React$Component) {
             messaging.requestPermission().then(function () {
                 messaging.getToken().then(function (currentToken) {
                     if (currentToken) {
-                        _this2.sendTokenToServer(currentToken);
-                        _this2.setState({ isPushEnabled: true });
+                        _this2.sendTokenToServer(currentToken).then(_this2.setState({ isPushEnabled: true }));
                     }
                 }).catch(function (err) {
                     console.warn('An error occurred while retrieving token. ', err);
