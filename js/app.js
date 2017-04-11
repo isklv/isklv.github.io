@@ -135,12 +135,12 @@ var App = function (_React$Component) {
                     _react2.default.createElement(_WebPush2.default, {
                         messagingSenderId: '681906672039',
                         sendSubscriptionToServer: function sendSubscriptionToServer(token) {
-                            return (0, _graphQLFetcher2.default)('\n                                mutation {\n                                    saveSubscriber(data: {hash: \'' + token + '\', url: \'' + window.location.href + '\'}){\n                                        status\n                                        id\n                                        errorCode\n                                    }\n                                }\n                                ').then(function (data) {
+                            return (0, _graphQLFetcher2.default)('\n                                mutation {\n                                    saveSubscriber(data: {hash: "' + token + '", url: "' + window.location.href + '"}){\n                                        status\n                                        id\n                                        errorCode\n                                    }\n                                }\n                                ').then(function (data) {
                                 console.log(data);
                             }).catch(console.error);
                         },
                         deleteSubscriptionToServer: function deleteSubscriptionToServer(token) {
-                            (0, _graphQLFetcher2.default)('\n                                mutation {\n                                    deleteSubscriber(data: {hash: \'' + token + '\'}){\n                                        status\n                                        id\n                                        errorCode\n                                    }\n                                }\n                                ').then(function (data) {
+                            (0, _graphQLFetcher2.default)('\n                                mutation {\n                                    deleteSubscriber(data: {hash: "' + token + '"}){\n                                        status\n                                        id\n                                        errorCode\n                                    }\n                                }\n                                ').then(function (data) {
                                 console.log(data);
                             }).catch(console.error);
                         }
