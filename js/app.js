@@ -251,7 +251,7 @@ var WebPush = function (_React$Component) {
             messaging.requestPermission().then(function () {
                 messaging.getToken().then(function (currentToken) {
                     if (currentToken) {
-                        _this2.sendTokenToServer(currentToken).then(_this2.setState({ isPushEnabled: true }));
+                        _this2.sendTokenToServer(currentToken);
                     }
                 }).catch(function (err) {
                     console.warn('An error occurred while retrieving token. ', err);
@@ -290,7 +290,7 @@ var WebPush = function (_React$Component) {
 
             console.log(currentToken);
 
-            this.setState({ token: currentToken });
+            this.setState({ token: currentToken, isPushEnabled: true });
 
             return !this.isTokenSentToServer(currentToken) ? this.setTokenSentToServer(currentToken) && this.props.sendSubscriptionToServer(currentToken) : false;
         }
