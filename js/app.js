@@ -216,6 +216,7 @@ var WebPush = function (_React$Component) {
                 console.warn('Service workers aren\'t supported in this browser.');
             }
         });
+
         return _this;
     }
 
