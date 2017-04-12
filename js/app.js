@@ -140,7 +140,7 @@ var App = function (_React$Component) {
                             }).catch(console.error);
                         },
                         deleteSubscriptionToServer: function deleteSubscriptionToServer(token) {
-                            (0, _graphQLFetcher2.default)('\n                                mutation {\n                                    deleteSubscriber(data: {hash: "' + token + '"}){\n                                        status\n                                        id\n                                        errorCode\n                                    }\n                                }\n                                ').then(function (data) {
+                            (0, _graphQLFetcher2.default)('\n                                mutation {\n                                    deleteSubscriber(hash: "' + token + '"){\n                                        status\n                                        errorCode\n                                    }\n                                }\n                                ').then(function (data) {
                                 console.log(data);
                             }).catch(console.error);
                         }
