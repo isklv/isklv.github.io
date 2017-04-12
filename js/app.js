@@ -217,6 +217,10 @@ var WebPush = function (_React$Component) {
             }
         });
 
+        firebase.onMessage(function (data) {
+            return console.log(data);
+        });
+
         return _this;
     }
 
