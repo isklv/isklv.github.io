@@ -216,11 +216,6 @@ var WebPush = function (_React$Component) {
                 console.warn('Service workers aren\'t supported in this browser.');
             }
         });
-
-        firebase.onMessage(function (data) {
-            return console.log(data);
-        });
-
         return _this;
     }
 
@@ -240,6 +235,9 @@ var WebPush = function (_React$Component) {
             var messaging = firebase.messaging();
 
             messaging.useServiceWorker(registration);
+            messaging.onMessage(function (data) {
+                return console.log(data);
+            });
 
             if (Notification.permission === 'granted' && !this.isTokenSentToServer('')) {
                 this.subscribe();
