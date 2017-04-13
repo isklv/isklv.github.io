@@ -235,8 +235,23 @@ var WebPush = function (_React$Component) {
             var messaging = firebase.messaging();
 
             messaging.useServiceWorker(registration);
-            messaging.onMessage(function (data) {
-                return console.log(data);
+
+            messaging.onMessage(function (payload) {
+                console.log('Message received. ', payload);
+
+                // register fake ServiceWorker for show notification on mobile devices
+                // navigator.serviceWorker.register('/serviceworker/messaging-sw.js');
+                Notification.requestPermission(function (permission) {
+                    if (permission === 'granted') {
+                        navigator.serviceWorker.ready.then(function (registration) {
+                            payload.notification.data = payload.notification;
+                            registration.showNotification(payload.notification.title, payload.notification);
+                        }).catch(function (error) {
+                            // registration failed :(
+                            showError('ServiceWorker registration failed.', error);
+                        });
+                    }
+                });
             });
 
             if (Notification.permission === 'granted' && !this.isTokenSentToServer('')) {
