@@ -1,6 +1,6 @@
 ﻿{
-	"name": "FunnyFacesMatch3",
-	"short_name": "FunnyFacesMatch3",
+	"name": "HalvaGame",
+	"short_name": "HalvaGame",
 	"start_url": "index.html",
 	"display": "fullscreen",
 	"orientation": "any",
