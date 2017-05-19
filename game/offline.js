@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1495112916,
+	"version": 1495201559,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -42,8 +42,7 @@
 		"media/round.m4a",
 		"media/touchblock.m4a",
 		"media/time.m4a",
-		"media/musictheme.ogg",
-		"media/musictheme.m4a",
+		"media/title.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
