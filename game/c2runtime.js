@@ -10191,7 +10191,7 @@ window["cr_setSuspended"] = function(s)
 			this.is_else_block = (this.conditions[0].type == null && this.conditions[0].func == cr.system_object.prototype.cnds.Else);
 		}
 	};
-	window["_c2hh_"] = "1DC212FE547C1D4A5B81D847C30B4DB08675BB2A";
+	window["_c2hh_"] = "589BFE45E8184D0A704634888356F5075BBCAF67";
 	EventBlock.prototype.postInit = function (hasElse/*, prevBlock_*/)
 	{
 		var i, len;
@@ -38087,16 +38087,16 @@ cr.behaviors.wrap = function(runtime)
 cr.getObjectRefTable = function () { return [
 	cr.plugins_.NinePatch,
 	cr.plugins_.AJAX,
-	cr.plugins_.Arr,
-	cr.plugins_.WebStorage,
 	cr.plugins_.Audio,
-	cr.plugins_.Browser,
+	cr.plugins_.Arr,
 	cr.plugins_.Button,
+	cr.plugins_.Browser,
 	cr.plugins_.Function,
 	cr.plugins_.Mouse,
 	cr.plugins_.Sprite,
 	cr.plugins_.Spritefont2,
 	cr.plugins_.Text,
+	cr.plugins_.WebStorage,
 	cr.plugins_.Touch,
 	cr.behaviors.Fade,
 	cr.behaviors.Sin,
@@ -38107,22 +38107,22 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.cnds.OnLayoutStart,
 	cr.plugins_.Sprite.prototype.acts.SetAnimFrame,
 	cr.system_object.prototype.exps.random,
-	cr.system_object.prototype.acts.LoadState,
 	cr.plugins_.WebStorage.prototype.cnds.LocalStorageExists,
 	cr.system_object.prototype.acts.SetVar,
 	cr.plugins_.WebStorage.prototype.exps.LocalValue,
 	cr.plugins_.Spritefont2.prototype.acts.SetText,
 	cr.system_object.prototype.cnds.CompareVar,
-	cr.system_object.prototype.acts.SetGroupActive,
+	cr.plugins_.Function.prototype.acts.CallFunction,
+	cr.system_object.prototype.cnds.Else,
+	cr.system_object.prototype.acts.LoadState,
 	cr.system_object.prototype.cnds.EveryTick,
 	cr.plugins_.Touch.prototype.cnds.OnTouchObject,
 	cr.plugins_.Audio.prototype.acts.Play,
-	cr.system_object.prototype.acts.GoToLayout,
 	cr.plugins_.Sprite.prototype.acts.StartAnim,
-	cr.plugins_.Sprite.prototype.acts.SetVisible,
-	cr.system_object.prototype.cnds.Else,
 	cr.system_object.prototype.acts.Wait,
 	cr.system_object.prototype.acts.SaveState,
+	cr.plugins_.Sprite.prototype.acts.SetVisible,
+	cr.system_object.prototype.acts.GoToLayout,
 	cr.system_object.prototype.cnds.IsGroupActive,
 	cr.plugins_.Function.prototype.cnds.OnFunction,
 	cr.plugins_.Arr.prototype.cnds.ArrForEach,
@@ -38140,7 +38140,6 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.acts.SetInstanceVar,
 	cr.plugins_.Sprite.prototype.exps.Y,
 	cr.plugins_.Sprite.prototype.acts.SetBoolInstanceVar,
-	cr.plugins_.Function.prototype.acts.CallFunction,
 	cr.system_object.prototype.cnds.For,
 	cr.plugins_.Function.prototype.exps.Param,
 	cr.system_object.prototype.exps.loopindex,
@@ -38158,11 +38157,12 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.cnds.Compare,
 	cr.plugins_.Sprite.prototype.cnds.PickByUID,
 	cr.plugins_.Arr.prototype.acts.Clear,
-	cr.plugins_.Sprite.prototype.acts.Destroy,
 	cr.system_object.prototype.exps.layoutwidth,
 	cr.plugins_.Arr.prototype.acts.SetSize,
 	cr.plugins_.NinePatch.prototype.acts.SetPos,
 	cr.plugins_.NinePatch.prototype.acts.SetSize,
+	cr.plugins_.Sprite.prototype.acts.Destroy,
+	cr.system_object.prototype.acts.SetGroupActive,
 	cr.system_object.prototype.exps.dt,
 	cr.plugins_.Sprite.prototype.cnds.CompareY,
 	cr.system_object.prototype.cnds.Every,
@@ -38181,6 +38181,11 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.acts.SetWidth,
 	cr.plugins_.WebStorage.prototype.acts.StoreLocal,
 	cr.system_object.prototype.cnds.OnLayoutEnd,
+	cr.plugins_.AJAX.prototype.acts.Post,
 	cr.system_object.prototype.cnds.OnSaveComplete,
-	cr.system_object.prototype.exps.savestatejson
+	cr.system_object.prototype.exps.savestatejson,
+	cr.system_object.prototype.cnds.IsMobile,
+	cr.plugins_.Audio.prototype.acts.SetPaused,
+	cr.plugins_.Browser.prototype.acts.GoToURLWindow
 ];};
+
