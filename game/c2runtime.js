@@ -38085,19 +38085,19 @@ cr.behaviors.wrap = function(runtime)
 	};
 }());
 cr.getObjectRefTable = function () { return [
-	cr.plugins_.NinePatch,
-	cr.plugins_.AJAX,
-	cr.plugins_.Audio,
-	cr.plugins_.Arr,
-	cr.plugins_.Button,
 	cr.plugins_.Browser,
 	cr.plugins_.Function,
 	cr.plugins_.Mouse,
-	cr.plugins_.Sprite,
-	cr.plugins_.Spritefont2,
-	cr.plugins_.Text,
 	cr.plugins_.WebStorage,
+	cr.plugins_.Sprite,
+	cr.plugins_.Text,
+	cr.plugins_.Spritefont2,
 	cr.plugins_.Touch,
+	cr.plugins_.NinePatch,
+	cr.plugins_.AJAX,
+	cr.plugins_.Arr,
+	cr.plugins_.Audio,
+	cr.plugins_.Button,
 	cr.behaviors.Fade,
 	cr.behaviors.Sin,
 	cr.behaviors.Physics,
@@ -38186,6 +38186,6 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.savestatejson,
 	cr.system_object.prototype.cnds.IsMobile,
 	cr.plugins_.Audio.prototype.acts.SetPaused,
-	cr.plugins_.Browser.prototype.acts.GoToURLWindow
+	cr.plugins_.Browser.prototype.acts.GoToURL
 ];};
 
